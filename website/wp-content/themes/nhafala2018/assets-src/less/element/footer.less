@@ -1,0 +1,111 @@
+footer#colophon {
+    background: @color-secondary;
+    color: #fff;
+    padding: @pad 0;
+    min-height: @footer-height;
+    height: auto;
+    .screen-reader-text {
+        display:none;
+    }
+    .social-links-menu {
+        width: 100%;
+        display:inline-block;
+        margin:0;
+        padding: 0;
+        text-align:right;
+        li {
+            display:inline-block;
+            svg.icon {
+                fill: #fff;
+                width: 1.5em;
+                height: 1em;
+                margin: 0 .5em;
+            }
+        }
+    }
+    @logo-height: @footer-height - (@pad*2); 
+    .footer-logo-container {
+        overflow:hidden;
+        margin-top:0;
+        margin-bottom: 0;
+        height: @logo-height;
+        a {
+            display:inline-block;
+            margin:0;
+            padding: 0;
+            max-height: @logo-height;            
+        }
+        svg {
+          fill:none;
+          stroke: #fff;
+          height: @logo-height;
+          width: auto;
+        }
+        img {
+            max-height: @logo-height;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            display:inline-block;
+            margin:0;
+            padding:0;
+        }
+    }
+}
+
+#to-top {
+  border-radius: 50%;
+  width: @pad*3;
+  height: @pad*3;
+  background: @color-primary;
+  color: #fff;
+  display:block;
+  font-size: 1em;
+  height: auto;
+  line-height: @pad*3;
+  text-align:center;
+  position:fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration:none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity .24s @transition-ease;
+  span {
+    display:inline-block;
+    line-height: @pad*3;
+  }  
+}
+
+body.is-sticky {
+  #to-top {
+    opacity: 1;
+    background-color: #3498db;
+    transition: opacity .24s @transition-ease;
+  }
+}
+
+@media (max-width: @s-max) {
+  footer#colophon {
+    text-align:center;
+    .footer-logo-container {
+      margin-bottom: 1em;
+    }
+    .social-links-menu {
+      text-align:center;
+      margin-top: 1em;
+    }
+  }
+}
+
+// stick footer to bottom
+@footer-height: @nav-height * 2;
+#wrap {
+    min-height: 100%;
+    margin-bottom: -@footer-height;
+    &:after {
+        content: "";
+        display:block;
+        height: @footer-height;
+    }
+}

@@ -1,0 +1,81 @@
+.cherry-projects-wrapper .cherry-animation-container.loading-animation-helix.grid-layout{
+	.cherry-animation-item{
+		position: relative;
+		transition: 1s;
+		overflow: hidden;
+		&:before{
+			content: '';
+			position: absolute;
+			left:100%;
+			bottom: 0;
+			top: 0;
+			display: inline-block;
+			right:0;
+			transition: .48s cubic-bezier(0.620, 0.155, 0.185, 0.915);
+			width: 100%;
+			z-index: 100;
+		}
+		.inner-wrapper{
+      transform: scale(1);
+      transform: translateZ(0);
+      transform: translateY(0);
+      transform: rotateY(0);
+      transform: scale(1) translateZ(0) translateY(0) rotateY(0);
+			transition: all .32s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			opacity:1;
+			transition-delay: .36s;
+		}
+		&.animate-cycle-show{
+			&:before{
+				left: -100%;
+				right: 0;
+				width: 100%;
+				transition: all .32s cubic-bezier(0.660, 0.055, 0.055, 0.980);
+			}
+			.inner-wrapper{
+        transform-style: preserve-3d;
+        opacity: 0;
+        transform: translateZ(0);
+        transform: translateY(0);
+        transform: rotateY(0);
+				transform: scale(.85);
+        transform: scale(.85) translateZ(0) translateY(0) rotateY(0);      
+				transition: all .32s cubic-bezier(.29,.65,.64,.97);
+			}
+		}
+		&.animate-cycle-hide{
+			&:before{
+				left: -100%;
+				right: 0;
+				width: 100%;
+				transition: all .48s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			}
+			.inner-wrapper {
+        transform-style: preserve-3d;
+        opacity: 0;
+        transition: all .32s cubic-bezier(.29,.65,.64,.97);
+        transform: translateZ(0);
+        transform: translateY(0);
+        transform: rotateY(0);
+        transform: scale(0.85);
+        transform: scale(.85) translateZ(0) translateY(0) rotateY(0);  
+			}
+		}
+	}
+}
+
+.cherry-projects-wrapper .cherry-animation-container.loading-animation-helix .projects-item:nth-child(5n+1):before{
+	background-color: @color_background-project-1!important;
+}
+.cherry-projects-wrapper .cherry-animation-container.loading-animation-helix .projects-item:nth-child(5n+2):before{
+	background-color: @color_background-project-2!important;
+}
+.cherry-projects-wrapper .cherry-animation-container.loading-animation-helix .projects-item:nth-child(5n+3):before{
+	background-color: @color_background-project-3!important;
+}
+.cherry-projects-wrapper .cherry-animation-container.loading-animation-helix .projects-item:nth-child(5n+4):before{
+	background-color: @color_background-project-4!important;
+}
+.cherry-projects-wrapper .cherry-animation-container.loading-animation-helix .projects-item:nth-child(5n+5):before{
+	background-color: @color_background-project-5!important;
+}

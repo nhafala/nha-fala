@@ -1,0 +1,134 @@
+@input-padding: .5em 1em;
+@input-border-radius: 3px;
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+select,
+textarea {
+	background: @color-border;
+	border: 1px solid @color-border;
+	line-height: 1.5em;
+	height: auto;
+	padding: @input-padding;
+	border-radius: @input-border-radius;
+	margin: 0 0 1em 0;
+	max-width: 100%;
+	width: 100%;
+	display: inline-block;
+	&.tm_contact_error {
+		border-color: #c30;
+	}
+	&.tm_pb_contactform_validate_field {
+		display: none !important;
+	}
+}
+
+.tm_pb_contact_captcha {
+	width: 4em !important;
+}
+.tm-pb-contact-message {
+	background: #c30;
+	color: #fff;
+	// padding: @input-padding;
+	border-radius: @input-border-radius;
+	margin-bottom: 1em;
+	p {
+		margin: 0;
+		padding: @input-padding;
+	}
+	ul {
+		padding: @input-padding;
+		margin: 0;
+		li {
+			display: inline-block;
+			margin: 0;
+			&:after {
+				display: inline-block;
+				content: ",";
+				margin-right: .3em;
+			}
+		}
+	}
+}
+input[type="button"],
+input[type="submit"],
+button[type="submit"],
+input[type="reset"],
+button,
+#tm_builder_outer_content .tm_pb_button,
+#tm_builder_outer_content .tm_pb_contact_submit,
+.btn {
+	border-radius: @input-border-radius;
+	border: 1px solid @color-border;
+	background: @color-border;
+	font-size: @font-size;
+	line-height: @line-height;
+	height: auto;
+	font-weight: 400;
+	display: inline-block;
+	padding: @input-padding;
+	min-width: 5em;
+  text-align: center;
+  text-decoration: none;
+  &.btn-secondary {
+    color: #fff;
+    background: @color-link;
+    border-color: @color-link;
+    &:hover {
+      background: @color-link-hover;
+      border-color: @color-link-hover;
+    }
+  }
+}
+
+input[type="submit"],
+button[type="submit"],
+#tm_builder_outer_content .tm_pb_contact_submit,
+.btn.primary {
+	background: @color-primary;
+	border-color: @color-primary;
+	color: #fff;
+	&:hover {
+		background: lighten(@color-primary, 10%);
+		border-color: lighten(@color-primary, 10%);
+	}
+}
+
+label {
+	font-size: .85em;
+	color: @color-link;
+}
+
+ul[id^='pie_'] {
+	padding: 0;
+	list-style: none;
+}
+
+form {
+	margin-bottom: 1.5em;
+	.legend {
+		font-size: .85em;
+		&.error {
+			color: @color-error;
+		}
+	}
+	.legend_txt {
+		margin-top: -1em;
+		margin-bottom: 1em;
+	}
+	[name='pie_reset'] {
+		float: right;
+	}
+}

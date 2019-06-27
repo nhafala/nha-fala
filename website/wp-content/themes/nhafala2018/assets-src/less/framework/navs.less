@@ -1,0 +1,23 @@
+#nav {
+  &.horizontal {
+    height: @nav-height;
+    .menu {
+      display: block;
+      height: @nav-height;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      & > li {
+        display: block;
+        float: left;
+        line-height: @nav-height;
+        a {
+          display: block;
+          float: left;
+          line-height: 1.5em;
+          padding: @pad / 2 @pad;
+        }
+      }
+    }
+  }
+}

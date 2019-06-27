@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image: url(fondoazulprueba.jpg);
+	background-repeat: repeat;
+}
+
+#outerwrapper {
+	bottom: 50%;
+	right: 50%;
+	position: absolute;
+	width: 1250px;
+	height: 810px;
+	background-repeat: repeat;
+	overflow: visible;
+}
+
+#wrapper {
+	position: relative;
+	left: 50%;
+	text-align: left;
+	z-index:1;
+	height: 810px;
+	bottom: -50%;
+	/*border: thick solid #F00;*/
+}
+
+.content {
+	position:absolute;
+	left:200px;
+	top:10px;
+	width:880px;
+	height:650px;
+	z-index:12;
+	font-family: "Century Gothic";
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	/*background-color: rgba(251,251,255,0.6);*/
+	overflow-y:scroll;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 130px;
+	display: compact;
+	color: #69F;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #FFF;
+}
+
+.content_full {
+	position:absolute;
+	left:10px;
+	top:10px;
+	width:1150px;
+	height:650px;
+	z-index:12;
+	font-family: "Century Gothic";
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	/*background-color: rgba(251,251,255,0.6);*/
+	overflow-y:scroll;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	display: compact;
+	color: #69F;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #FFF;
+}
+
+#menuwrapper {
+	position:fixed;
+	left:0px;
+	top:85%;
+	bottom:0px;
+	width:auto;
+	height:auto;
+	z-index:1;
+	background-color: #000;
+	right: 0px;
+	overflow: auto;
+}
+
+#menuwrapper ul {
+
+	display: inline-block;
+}
+
+#menuwrapper ul li{
+	height: 30px;
+	width: 175px;
+	padding: 50px;
+	display: inline;
+	font-size: 20pt;
+}
+
+#menu_footer {
+	clear:both;
+}
+
+#calendar {
+	font-family: "Century Gothic";
+	z-index: 100;
+	/*visibility: hidden;*/
+	height: 216px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+
+#facebook_title {
+	display: inline;
+	float: right;	
+}
+
+.center-all {
+	text-align: center;
+	vertical-align: bottom;
+	display: inline;
+	position: relative;
+	left: 100px;
+}
+
+.year_item {
+	position: inherit;
+	top: 25px;
+	right: 30px;
+}
+
+.portrait_menu {
+	position: inherit;
+	top: 30%;
+	left: 12%;
+	vertical-align: middle;
+}
+
+.shadow {
+    -moz-box-shadow: 10px 10px 10px #000;
+    -webkit-box-shadow: 10px 10px 10px #000;
+    box-shadow: 10px 10px 10px #000;
+}

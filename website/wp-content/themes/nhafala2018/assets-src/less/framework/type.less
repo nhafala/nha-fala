@@ -1,0 +1,174 @@
+a {
+  color: @color-link;
+  transition: color .12s @transition-ease;
+  &:visited,
+  &.active {
+    color: @color-link;
+  }
+  &:hover {
+    color: @color-link-hover;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  padding: 0;
+  line-height: @line-height;
+  font-weight: normal;
+  color: darken(@color-primary, 10%);
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      color: @color-link-hover;
+    }
+    &:active {
+      // background: @color-link-hover;
+      // color: #ff;
+    }
+  }
+}
+
+h1,
+.h1 {
+  font-size: @font-size*2;
+  line-height: 1.5em;
+  margin: @leading*2 0 @leading;
+  font-weight: bolder;
+  small {
+    font-size: @font-size*1.45;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+h2,
+.h2 {
+  font-size: @font-size*1.5;
+  line-height: 1.5;
+  margin: @leading*2 0 @leading / 2;
+  font-weight: bolder;
+  small {
+    line-height: 1;
+    font-size: @font-size;
+    font-weight: normal;
+    margin: 0;
+  }
+  color: @color-primary;
+}
+
+h3,
+.h3 {
+  font-size: @font-size;
+  font-weight: bold;
+  margin: @leading*2 0 @leading;
+  small {
+    line-height: 1;
+    font-weight: normal;
+    margin: 0;
+  }
+  color: @color-primary;  
+}
+
+h4,
+.h4 {
+  font-size: @font-size*.75;
+  line-height: @leading;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: @leading*2 0 @leading;
+
+}
+
+h5,
+.h5 {
+  font-size: @font-size;
+  margin: @leading*2 0 @leading;
+}
+
+h6,
+.h6 {
+  font-size: @font-size;
+  margin: @leading*2 0 @leading;
+}
+
+.attention-grabber,
+.lead {
+  font-size: @font-size*1.25;
+  line-height: @leading;
+  margin-top: @leading;
+  margin-bottom: @leading;
+}
+
+p,
+ol,
+ul {
+  padding: 0;
+  margin-top: @leading;
+  margin-bottom: @leading;
+}
+
+ul,
+ol {
+  padding: 0 0 0 @font-size*2;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+blockquote {
+  margin: @leading @font-size*2;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px solid @color-border;
+  margin: (@leading*2)-1px auto @leading*2;
+  width: 50%;
+}
+
+figcaption {
+  text-align: center;
+  color: @color-meta;
+}
+
+/* type debug grid */
+body {
+  // background-color: #eee;
+  // background-image: linear-gradient(to bottom,rgba(128,128,128,.05) 1px,transparent 1px);
+  // background-position: left top;
+  // background-repeat: repeat;
+  // background-size: 100% @leading;
+  // &:after {
+  //     content:"";
+  //     display:block;
+  //     position:fixed;
+  //     top:0;
+  //     right:0;
+  //     bottom:0;
+  //     left:0;
+  //     background-image: linear-gradient(to right,rgba(128,128,128,.05) 1px,transparent 1px);
+  //     background-position: center top;
+  //     background-repeat: repeat;
+  //     background-size: 100%/@grid-columns-count 100%;
+  //     z-index:-1;
+  // }
+}

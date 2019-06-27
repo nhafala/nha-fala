@@ -1,0 +1,29 @@
+.site-footer {
+	color: $color__footer;
+	@include font-size(12/16);
+	line-height: 1.714285;
+	.invert{
+		color: $color__footer;
+	}
+}
+
+.footer-container {
+	padding: 15px 0;
+}
+
+.site-info {
+	.footer-logo,
+	.social-list,
+	.footer-menu,
+	.footer-copyright {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+.site-footer.default{
+	.site-info.container{
+		max-width: inherit;
+	}
+}
+@import "footer/layout-style-1";
+@import "footer/layout-style-2";

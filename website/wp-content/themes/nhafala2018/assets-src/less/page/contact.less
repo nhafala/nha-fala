@@ -1,0 +1,22 @@
+.tm_pb_map {
+    position:relative;
+    width: 100%;
+    height: 400px;
+    @media screen and (min-width: @screen-s) {
+        height: 640px;
+    }
+}
+
+.tm_pb_contact_form {
+  box-sizing:border-box;
+
+  @media (max-width: @screen-s) {
+    .row {
+      overflow-x:hidden;
+    }
+    .col-md-12 {
+      box-sizing:border-box;
+      width:100%;
+    }
+  }
+}

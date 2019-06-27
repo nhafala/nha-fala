@@ -1,0 +1,246 @@
+.navigation-item {
+	display: inline-block;
+	margin: 0 .5em;
+	line-height: @pad * 2;
+	a {
+		display: inline-block;
+		text-decoration: none;
+		margin: 0;
+		padding: 0;
+		line-height: @pad * 2;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: .75em;
+		letter-spacing: 1px;
+		font-family: @font-family-secondary;
+		font-weight: bolder;
+	}
+	// &.current_page_parent > a,
+	&.current-menu-item > a {
+		border-bottom: 2px solid #fff;
+	}
+}
+
+// header navigation
+// desktop
+@media (min-width: @m-min) {
+	#navigation {
+		position: absolute;
+		width: 100%;
+		background: @color-primary;
+		z-index: 1000;
+		.menu > ul,
+		.menu {
+			text-align: center;
+			display: block;
+			list-style: none;
+			margin: 0;
+			padding: @pad 0;
+			height: @nav-height;
+			& > li {
+				.navigation-item;
+			}
+		}
+	}
+	#header {
+		padding-bottom: @nav-height;
+		.mobile-menu-overlay {
+			display: none;
+		}
+	}
+	body.is-sticky #navigation {
+		position: fixed;
+		box-shadow: 0 0 @pad*2 rgba(0, 0, 0, .125);
+		top: 0;
+		z-index: 10000;
+	}
+}
+// mobile
+@media (max-width: (@screen-m - 1)) {
+	#header {
+		padding-bottom: @pad;
+		.mobile-menu-switch {
+			z-index: 9999;
+			display: block;
+			position: absolute;
+			right: @pad * 4;
+			top: @pad*2.5;
+			&:hover {
+				cursor: pointer;
+				// color: @color-link-hover;
+			}
+			.dashicons {
+				transform-origin: 50% 50%;
+				transition: all .24s @transition-ease;
+				width: @pad *2;
+				height: @pad *2;
+			}
+			.dashicons-menu {
+				transform-origin: 50% 50%;
+			}
+			.dashicons-no-alt {
+				transform: rotate(45deg);
+				transform-origin: 50% 50%;
+				opacity: 0;
+			}
+			span {
+				font-size: @pad*2;
+				position: absolute;
+			}
+		}
+		.mobile-menu-overlay {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: @color-primary;
+			display: block;
+			opacity: 0;
+			z-index: -1;
+			transition: opacity .24s @transition-ease;
+		}
+	}
+	#navigation {
+		// width: 320px;
+		background: none;
+		position: absolute;
+		z-index: 5000;
+		left: 0;
+		top: @pad*.5;
+		right: 0;
+		min-height: 100%;
+		padding-top: @pad;
+		z-index: -1;
+		overflow: hidden;
+		.menu > ul,
+		.menu {
+			opacity: 0;
+			transform: scale(1.1) translateX(@pad); //translateX(-100%);
+			display: block;
+			list-style: none;
+			margin: 0 0 0 @pad*2;
+			padding: @pad @pad @pad*2 @pad/2;
+			& > li {
+				display: block;
+				text-align: left;
+				&.current-menu-item > a {
+					border-bottom: 2px solid #fff;
+				}
+			}
+			a {
+				color: #fff;
+				display: inline-block;
+				padding: .25em 0;
+				margin: 0 0 @pad/2 0;
+				text-decoration: none;
+				font-size: @pad;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-weight: bolder;
+			}
+		}
+	}
+	body.mobile-menu-open {
+		#header {
+			.mobile-menu-overlay {
+				opacity: 1;
+				z-index: 1050;
+				left: 0;
+				transition: all .24s @transition-ease;
+			}
+			.mobile-menu-switch {
+				.dashicons-no-alt {
+					transform: rotate(0deg);
+					opacity: 1;
+					transition: all .24s @transition-ease;
+				}
+				.dashicons-menu {
+					transform: rotate(-45deg);
+					opacity: 0;
+					transition: all .24s @transition-ease;
+				}
+			}
+		}
+		#navigation {
+			.menu {
+				opacity: 1;
+				transform: scale(1) translateX(0);
+				transition: all .36s ease-out; //@transition-ease;
+			}
+			z-index: 1090;
+		}
+	}
+}
+
+// footer-navigation
+.footer-menu {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	& > li {
+		.navigation-item;
+	}
+	@media screen and (min-width: @screen-s) {
+		width: 100%;
+	}
+}
+
+// pagination
+nav.navigation.pagination {
+	margin: 1em 0;
+	line-height: 2em;
+	width: 100%;
+	display: block;
+	text-align: center;
+	.screen-reader-text {
+		display: none;
+		position: relative;
+		text-indent: -9999em;
+	}
+	.page-numbers.dots {
+		display: none;
+	}
+	.page-numbers {
+		margin: 0 1em;
+		text-decoration: none;
+	}
+	svg.icon {
+		width: 1em;
+		height: 1em;
+		display: inline-block;
+		stroke: none;
+		fill: @color-link;
+		&:hover {
+			stroke: @color-link-hover;
+		}
+	}
+	.page-numbers:hover {
+		svg {
+			fill: @color-link-hover;
+		}
+	}
+}
+
+.ngg-navigation {
+	display: block;
+	clear: both;
+	text-align: center;
+	padding: @pad 0 0 0;
+	.clearfix;
+	.current,
+	.next,
+	.prev,
+	.page-numbers {
+		margin: 0;
+		text-decoration: none;
+		padding: .25em .5em;
+	}
+	.clearfix;
+	.current,
+	.next,
+	.prev,
+	.page-numbers {
+		cursor: pointer !important;
+	}
+}

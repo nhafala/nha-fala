@@ -1,0 +1,36 @@
+{
+  "name": "nhafala2018",
+  "version": "0.0.1",
+  "description": "wordpress theme for nha-fala.ch",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sasha.anpilov@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "entypo": "^2.0.0",
+    "jquery": "^3.2.1",
+    "social-likes": "^3.1.3",
+    "social-likes-next": "^1.1.0",
+    "swipebox": "^1.4.6"
+  },
+  "private": true
+}

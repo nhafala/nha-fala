@@ -1,0 +1,184 @@
+/* events */
+
+.googlemap {
+  margin-bottom: @pad*2;
+}
+
+.eo-event-future {
+	clear: left;
+	padding-bottom: @pad/2;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: @pad/2;
+}
+
+.eo-event-future p {
+	margin: 0;
+}
+
+td.fc-day-number {
+  font-size: 1.5em !important;
+  font-weight: bolder !important;
+  color: @color-meta;
+}
+
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+  border-color: #ddd !important;
+}
+
+.fc-list-header-left {
+  font-size: @pad;
+  font-weight: normal;
+}
+.fc-list-header-right {
+  font-size: @pad;
+}
+
+.eo-events {
+  list-style:none;
+  padding: 0;
+}
+
+.eo-events-nav {
+	padding-bottom: @pad;
+}
+
+.eo-events-nav>div {
+	display: inline-block;
+}
+
+.eo-events-nav-later {
+	float: right;
+}
+
+.eo-event-meta {
+  padding-left: 0;
+  margin: 0 0 @pad 0 !important;
+  list-style: none;
+}
+
+.sf-event-legend {
+	display: none;
+}
+
+.eo-fullcalendar .sf-event-legend {
+	display: block;
+}
+
+.sf-event-legend {
+	float: none;
+	clear: both;
+	padding: 0 0 .5em 0 !important;
+	text-align: right;
+	font-size: 0.8em !important;
+}
+
+.sf-event-legend span {
+	border: 1px solid #ddd;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1em;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.sf-event-legend-cell {
+	display: inline-block;
+	margin: 0 0 0 1em !important;
+}
+
+.sf-calendar-subscribe {
+	margin-bottom: 2em;
+	display: block;
+}
+
+.single-event #primary {
+	width: 100%;
+	max-width: 100%;
+	flex: 0 0 100%;
+	left: 0;
+}
+
+.fc-button-group select,
+#sf-future-events-select {
+	padding: 5.5px 20px;
+	border: 1px solid #ccc;
+}
+
+#sf-future-events-select {
+  max-width: 240px;
+	float: right;
+}
+
+.future-event-item[data-duration="0"] .end-date,
+.future-event-item[data-duration="0"] .future-event-duration {
+	display: none;
+}
+
+#sf-future-events-content {
+	display: table;
+	width: 100%;
+	padding: 0;
+	margin: 0 0 @pad*3 0;
+	// border-bottom: 1px solid #ddd;
+	clear: both;
+}
+
+.future-event-datetime,
+.future-event-details {
+	display: table-cell;
+}
+
+.future-event-datetime {
+	width: 20%;
+	min-width: 16em;
+}
+
+.future-event-venue {
+	font-size: .8em;
+}
+
+.fc-title {
+  display:block;
+  font-size: 10px !important;
+}
+
+.qtip {
+  font-size: @pad*.8 !important;
+  line-height: 1.25em !important;
+}
+.fc-icon::after,
+.fc-icon:after {
+  display:inline-block;
+}
+.fc-center {
+  .h2 !important;
+  margin: 0!important;
+  color: @color-fg !important;
+}
+th.fc-day-header {
+  padding: @pad 0 !important;
+}
+.upcoming-events-title {
+  margin-top: 0;
+}
+@media (max-width: @s-max) {
+	#sf-future-events-select {
+		float: none;
+		text-align: center;
+		margin: 0 auto 1em;
+		display: block;
+	}
+	#sf-future-events-content {
+		display: block;
+	}
+	.future-event-datetime,
+	.future-event-details {
+		display: block;
+		min-width: initial;
+		width: 100%;
+	}
+}
+
+/* end events */

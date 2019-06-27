@@ -1,0 +1,377 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image: url(fondoazulprueba.jpg);
+	background-repeat: repeat;
+}
+
+#outerwrapper {
+	bottom: 50%;
+	right: 50%;
+	position: absolute;
+	width: 1250px;
+	height: 810px;
+	background-repeat: repeat;
+	overflow: visible;
+}
+
+#wrapper {
+	position: relative;
+	left: 50%;
+	text-align: left;
+	z-index:1;
+	height: 810px;
+	bottom: -50%;
+	/*border: thick solid #F00;*/
+}
+
+.content {
+	position:absolute;
+	left:200px;
+	top:10px;
+	width:880px;
+	height:650px;
+	z-index:12;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	background-color: rgba(251,251,255,0.6);
+	overflow-y:scroll;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	display: compact;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-family: MuliRegular;
+	font-size: 14pt;
+	color: #000;
+	text-align: left;
+}
+
+.ul-portrait {
+	padding-left:270px;
+}
+
+.content h1 a {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	color: #69F;
+}
+
+.content_full {
+	position:absolute;
+	left:10px;
+	top:10px;
+	width:1150px;
+	height:650px;
+	z-index:12;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	background-color: rgba(251,251,255,0.6);
+	overflow-y:scroll;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	display: compact;
+	color: #69F;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+
+#menuwrapper {
+	position:fixed;
+	left:0px;
+	top:88%;
+	bottom:0px;
+	width:auto;
+	height:auto;
+	z-index:1;
+	background-color: #000;
+	right: 0px;
+	overflow: auto;
+}
+
+#menuwrapper ul {
+
+	display: inline-block;
+}
+
+#menuwrapper ul li{
+	height: 30px;
+	width: 175px;
+	padding: 50px;
+	display: inline;
+	font-size: 20pt;
+}
+
+#menu_footer {
+	clear:both;
+}
+
+#loginwrapper {
+	position:fixed;
+	right:-18px;
+	top:80px;
+	width:30;
+	height:100px;
+	z-index:10000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	/*	border-top-width: 10px;
+	border-right-width: 10px;
+	border-bottom-width: 10px;
+	border-left-width: 10px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #009;
+	border-right-color: #009;
+	border-bottom-color: #009;
+	border-left-color: #009;*/
+}
+
+#loginbutton {
+	background-color: #06F;
+	height: 30px;
+	width: 70px;
+	display:inline-block;
+	vertical-align:middle;
+	text-align: center;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-box-shadow: 3px 3px 3px #000;
+	-webkit-box-shadow: 3px 3px 3px #000;
+	box-shadow: 3px 3px 3px #000;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-sand-transform: rotate(90deg);
+	transform: rotate(90deg);
+	padding-top: 15px;
+}
+
+#loginbutton a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+}
+
+#loginpush {
+	float: right;
+	width: 0px;
+	height: 1px;
+}
+
+#calendar {
+	z-index: 100;
+	/*visibility: hidden;*/
+	height: 216px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+
+#facebook_title {
+	display: inline;
+	float: right;	
+}
+
+.center-all {
+	vertical-align: bottom;
+	display: inline;
+	position: relative;
+	left: 100px;
+	width: 300px;
+	float: left;
+}
+
+.year_item {
+	position: inherit;
+	top: 25px;
+	right: 30px;
+}
+
+.portrait_menu {
+	position: inherit;
+	top: 30%;
+	left: 12%;
+	vertical-align: middle;
+}
+
+.shadow {
+    -moz-box-shadow: 10px 10px 10px #000;
+    -webkit-box-shadow: 10px 10px 10px #000;
+    box-shadow: 10px 10px 10px #000;
+}
+
+.archiv_excerpt img {
+	float:left;
+	padding-bottom: 35px;
+	padding-right: 20px;
+}
+
+.archiv_excerpt p {
+	font-size: 13pt;
+	display:block;
+}
+
+.read-more {
+	font-weight: bold;
+}
+
+.bottom_line {
+	border-bottom: 1px solid #333333;
+	clear:both;
+}
+
+.lW {
+	float: left;
+	clear: left;
+	height: 15px;
+	/*border: thin solid #F00;*/
+}
+.rW {
+	float: right;
+	clear: right;
+	height: 15px;
+	/*border: thin solid #F00;*/
+}
+
+.box {
+    position:absolute;
+	/* Safari and Chrome */
+    -webkit-background-size: 100% 100%;
+	/* Firefox */
+    -moz-background-size: 100% 100%;
+	/* Internet Explorer */
+    -ms-background-size: 100% 100%;
+	/* Opera */
+    -o-background-size: 100% 100%;
+	/* CSS3 */
+    background-size: 100% 100%;
+	text-align: center;
+}
+
+.box img{
+	/*display: block;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+.inside  {
+	visibility: hidden;
+	text-align:center;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	vertical-align: top;
+	/*border: thin solid #0F0;*/
+}
+.inside a {
+	text-align:center;
+}
+.inside p {
+	margin: 0em;
+	text-align: center;
+}
+.inside h6 {
+	font-size:18px;
+	margin: 0em;
+	text-align: center;
+}
+
+.inside_download  {
+	text-align:center;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/*border: thin solid #0F0;*/
+}
+.inside_download a {
+	text-align:center;
+}
+.inside_download p {
+	margin: 0em;
+	text-align: center;
+}
+.inside_download h6 {
+	font-size:18px;
+	margin: 0em;
+	text-align: center;
+}
+.calendar-link { 
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 100;
+}
+.year_item a {
+	color: #FFF;	
+}
+
+p img {
+	background-color:transparent !important;
+}
+
+/* IE-hack to avoid black borders on hyperlinked images (like NextGen Gallery) */
+img  {
+    border: 0
+}
+
+.vimeo_float iframe {
+	float:left;
+	padding: 20px;	
+	
+}
+
+/* div's to show social buttons on download page */
+.social-icon-left {
+	text-align: right;
+	height: 280px;
+	width: 48%;
+	overflow: hidden;
+	float: left;
+	padding-top: 12px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+}
+
+.social-icon-right {
+	text-align: left;
+	height: 280px;
+	overflow: hidden;
+	float: left;
+	padding-top: 12px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	padding-left: 24px;
+}
+.social-wrapper {
+	width:100%;
+	height:auto;
+}
+
+.social-wrapper img{
+	padding: 10px;
+}
+
+.fc-day div {
+	min-height: 38px !important;
+	min-width: 155px;
+}
+
+.fc-header-title h2{
+	margin-right: 20px;
+}

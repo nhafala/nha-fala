@@ -1,0 +1,114 @@
+/* #Button Appearance Styles (regular scheme) */
+.link {
+	color: $regular_link_hover_color;
+}
+.invert .link {
+	color: $invert_link_color;
+}
+.link:hover,
+.invert .link:hover {
+	color: $regular_link_color;
+}
+
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.invert .btn-primary,
+.invert .btn-secondary,
+.invert .btn-primary:hover,
+.invert .btn-secondary:hover{
+	color: $invert_link_color;
+}
+.btn,
+.btn-primary {
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+.btn:hover,
+.btn-primary:hover {
+	background-color: $regular_accent_color_2;
+	border-color: $regular_accent_color_2;
+}
+.btn:active,
+.btn-primary:active {
+	box-shadow: 0 0 10px $regular_accent_color_2;
+}
+.btn-secondary {
+	background-color: $regular_accent_color_2;
+	border-color: $regular_accent_color_2;
+}
+.btn-secondary:hover {
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+.btn-secondary:active {
+	box-shadow: 0 0 10px $regular_accent_color_1;
+}
+
+.error-404 .btn-secondary:hover {
+	color: $invert_link_color;
+	border-color: $regular_link_color;
+	background-color: $regular_link_color;
+}
+
+#tm_builder_outer_content .tm_pb_module .tm_pb_pricing_table_button.tm_pb_button {
+	background-color: $invert_link_color;
+	color: $regular_link_hover_color;
+	border-color: $invert_link_color;
+	font-family: @font_family($meta_font_family);
+	font-size: $meta_font_size{px};
+	letter-spacing: $meta_letter_spacing{em};
+}
+
+#tm_builder_outer_content .tm_pb_module .tm_pb_pricing_table_button.tm_pb_button:hover {
+	background-color: $regular_link_color;
+	color: $invert_link_color;
+	border-color: $regular_link_color;
+}
+.project-more-button{
+	background-color: $regular_link_color;
+	color: $invert_link_color;
+	border-color: $regular_link_color;
+}
+.project-more-button:hover, .link:hover{
+	background-color: $invert_link_hover_color;
+	color: $invert_link_color;
+	border-color: $invert_link_hover_color;
+}
+
+.link{
+	background-color: $invert_link_color;
+	color: $regular_link_hover_color;
+	border-color: $invert_link_color;
+}
+
+.btn-default {
+	color: $regular_accent_color_2;
+}
+.btn-default:hover {
+	color: $invert_link_color;
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+.btn-default:active {
+	box-shadow: 0 0 10px $regular_accent_color_1;
+}
+
+/* #Button Appearance Styles (invert scheme) */
+.invert .btn,
+.invert .btn-primary,
+.invert .btn-secondary,
+.invert .btn-default {
+	color: $invert_link_color;
+	border-color: $invert_link_color;
+}
+.invert .btn-primary:hover,
+.invert .btn-secondary:hover,
+.invert .btn-default:hover {
+	color: $regular_link_hover_color;
+	border-color: $invert_link_color;
+	background-color: $invert_link_color;
+}

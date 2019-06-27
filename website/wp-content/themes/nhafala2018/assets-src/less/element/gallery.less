@@ -1,0 +1,113 @@
+.gallery {
+	// display:none;
+	margin: @pad -@pad @pad*2;
+	padding: 0 @pad/2;
+	height: auto;
+	.clearfix;
+	.gallery-item {
+		box-sizing: border-box;
+		display: block;
+		float: left;
+		margin: 0;
+		padding: @pad /2;
+		.gallery-icon {
+			width: 100%;
+			height: auto;
+			display: block;
+			overflow: hidden;
+			line-height: 0;
+			box-sizing: border-box;
+			padding: @pad/2;
+			border: 1px solid @color-border;
+		}
+	}
+	&.gallery-columns-1 .gallery-item {
+		width: 100%/1;
+	}
+	&.gallery-columns-2 .gallery-item {
+		width: 100%/2;
+	}
+	&.gallery-columns-3 .gallery-item {
+    width: 100%/3;
+	}
+	&.gallery-columns-4 .gallery-item {
+    width: 100%/4;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-5 .gallery-item {
+    width: 100%/5;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-6 .gallery-item {
+    width: 100%/6;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-7 .gallery-item {
+    width: 100%/7;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-8 .gallery-item {
+    width: 100%/8;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-9 .gallery-item {
+    width: 100%/9;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-10 .gallery-item {
+    width: 100%/10;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-11 .gallery-item {
+    width: 100%/11;
+    .gallery-item-mobile
+	}
+	&.gallery-columns-12 .gallery-item {
+    width: 100%/12;
+    .gallery-item-mobile
+	}
+}
+
+.slideshowlink {
+  display:none;
+}
+
+.gallery-item-mobile {
+  @media (max-width: @s-max) {
+    width: 25%;
+  }
+  @media (max-width: @x-max) {
+    width: 100%/3;
+  }
+}
+
+.ngg-galleryoverview {
+  	// display:none;
+	margin: @pad -@pad @pad*2;
+	padding: 0 @pad/2;
+	height: auto;
+	.clearfix;
+  .ngg-gallery-thumbnail-box {
+    width: 100%/6;    
+    .gallery-item-mobile;
+    box-sizing: border-box;
+		display: block;
+		float: left;
+		margin: 0;
+		padding: @pad /2;
+    .ngg-gallery-thumbnail {
+      width: 100%;
+			height: auto;
+			display: block;
+			overflow: hidden;
+			line-height: 0;
+			box-sizing: border-box;
+			padding: @pad/2;
+			border: 1px solid @color-border;
+      img {
+        width:100%;
+        height: auto;
+      }
+    }
+  }
+}

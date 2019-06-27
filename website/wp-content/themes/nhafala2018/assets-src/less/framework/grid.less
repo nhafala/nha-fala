@@ -1,0 +1,140 @@
+/* --- Media queries breakpoints --- */
+@screen-x : 320px;
+@screen-s : 768px;
+@screen-m : 1024px;
+@screen-l : 1440px;
+
+/* --- Grid --- */
+@grid-columns-count : 12;
+@container-x : 100%; //@screen-xs - @pad*2;
+@container-s : @screen-s - @pad*2;
+@container-m : @screen-m - @pad*2;
+@container-l : 1080px;
+
+@mobile : "(max-width: @screen-s - 1)";
+
+@x-min : @screen-x;
+@x-max : (@screen-s - 1);
+
+@s-min : @screen-s;
+@s-max : (@screen-m - 1);
+
+@m-min : @screen-m;
+@m-max : (@screen-l - 1);
+
+@l-min : @screen-l;
+
+.make-grid(@n, @s, @i:1) when (@i =< @n) {
+  .c-@{s}-@{i} {
+    width: (@i * 100% / @n);
+    min-height: 1px;
+  }
+  .co-@{s}-@{i} {
+    margin-left: (@i * 100% / @n);
+  }
+  .make-grid(@n,@s,(@i+1));
+}
+
+.make-grid-bootstrap(@n, @s, @i:1) when (@i =< @n) {
+  .col-@{s}-@{i} {
+    width: (@i * 100% / @n);
+    min-height: 1px;
+    float:left;
+  }
+  .offset-@{s}-@{i} {
+    margin-left: (@i * 100% / @n);
+  }
+  .make-grid-bootstrap(@n,@s,(@i+1));
+}
+
+.make-grid-fluid(@n, @i:1) when (@i =< @n) {
+  .c-@{i} {
+    width: (@i * 100% / @n);
+    min-height: 1px;
+  }
+  .co-@{i} {
+    margin-left: (@i * 100% / @n);
+  }
+  .make-grid-fluid(@n,(@i+1));
+}
+
+.make-grid-fluid(@grid-columns-count);
+
+@media (min-width: 0) {
+  .make-grid(@grid-columns-count, x);
+  // .make-grid-bootstrap(@grid-columns-count, xs);
+}
+
+@media (min-width: @s-min) {
+  .make-grid(@grid-columns-count, s);
+  // .make-grid-bootstrap(@grid-columns-count, sm);
+}
+
+@media (min-width: @m-min) {
+  .make-grid(@grid-columns-count, m);
+  // .make-grid-bootstrap(@grid-columns-count, md);  
+}
+
+@media (min-width: @l-min) {
+  .make-grid(@grid-columns-count, l);
+  // .make-grid-bootstrap(@grid-columns-count, lg);  
+}
+
+@media (max-width: @x-max) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: @s-min) {
+  .container {
+    max-width: @container-s;
+  }
+}
+@media (min-width: @m-min) {
+  .container {
+    max-width: @container-m;
+  }
+}
+@media (min-width: @l-min) {
+  .container {
+    max-width: @container-l;
+  }
+}
+
+.container-fluid,
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: @pad;
+  padding-right: @pad;
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .clearfix();
+}
+
+.rw, .row {
+  margin-left: -@pad;
+  margin-right: -@pad;
+  .clearfix();
+}
+
+[class^="col-"],
+[class^="c-"] {
+  position:relative;
+  float: left;
+  padding-right: @pad;
+  padding-left: @pad;
+}
+
+.tm_pb_row_fullwidth > div {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (max-width: (@screen-m - 1)) {
+  .sm-box-1 { order: 1; }
+  .sm-box-2 { order: 2; }
+  .sm-box-3 { order: 3; }
+}

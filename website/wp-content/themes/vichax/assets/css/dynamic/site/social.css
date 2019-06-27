@@ -1,0 +1,11 @@
+.invert .social-list .menu-item > a:hover:before {
+	color: $invert_text_color;
+}
+
+.social-list .menu-item > a:hover:before, .fa:hover:before {
+	color: $regular_link_hover_color;
+}
+
+.invert .fa:hover:before {
+	color: $invert_link_color;
+}

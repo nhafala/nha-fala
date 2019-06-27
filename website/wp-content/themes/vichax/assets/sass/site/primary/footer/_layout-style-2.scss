@@ -1,0 +1,23 @@
+.site-footer.style-2 {
+	.site-info {
+		text-align: center;
+
+		> * + *{
+			margin-top: 30px;
+		}
+
+		> * + .social-list{
+			margin: 55px 0;
+		}
+
+		> * + .footer-copyright{
+			margin: 55px 0 0;
+		}
+	}
+	.site-info > *{
+		margin: 25px 0!important;
+	}
+	.footer-container {
+		padding: 30px 0;
+	}
+}

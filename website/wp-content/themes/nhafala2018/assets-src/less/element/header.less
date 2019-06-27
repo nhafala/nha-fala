@@ -1,0 +1,92 @@
+.nhafala-login-message {
+  position: absolute;
+  z-index: 10000;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align:center;
+  transform: translateY(-@pad*5);
+  opacity:0;
+  transition: transform .24s @transition-ease;
+  span {
+    width: 100%;
+    padding: @pad/2 @pad;
+    display: block;
+    background: lighten(@color-secondary, 10%);
+    color: @color-bg;
+  }
+  @media (min-width: @screen-m) {
+    top: @pad;
+    right: @pad;
+    left: auto;
+    span {
+      width: initial;
+    }
+  }
+  &.in {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .24s @transition-ease;
+  }
+  &.out {
+    transform: translateY(-@pad*5);
+    opacity: 0;
+    transition: all .12s @transition-ease;
+  }
+}
+#header {
+  background: @color-primary;
+  color: #fff;
+  position: relative;
+  .mobile-menu-switch {
+    display: none;
+  }
+  #logo {
+    text-align: center;
+    margin: 1em 0;
+    height: 100px;
+    svg {
+      fill: none;
+      stroke: #fff;
+      max-width: 300px;
+      height: @pad*6;
+      width: auto;
+      display: inline-block;
+    }
+    img {
+      display: inline-block;
+      margin: 0 auto;
+      max-width: 300px;
+      max-height: 95px;
+      width: auto;
+      height: auto;
+    }
+    a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      .tagline {
+        position: relative;
+        top: 0;
+        font-size: 0.95em;
+      }
+    }
+  }
+}
+
+/* mobile */
+@media (max-width: (@screen-m - 1)) {
+  #header {
+    #logo {
+      svg {
+        height: @pad*5;
+      }
+      a {
+        .tagline {
+          display: block;
+        }
+      }
+    }
+  }
+}
