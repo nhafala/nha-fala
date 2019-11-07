@@ -253,19 +253,41 @@ function post_link()
         ob_start();
         ?>
         <h3>Kalender der verschiedenen<br> Gruppen zum abonnieren</h3>
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <a href="https://calendar.google.com/calendar/ical/8733709plbmcsqluaq0fuq62ls%40group.calendar.google.com/public/basic.ics"-->
+<!--                   target="_blank">Gruppe «hurrlibus»</a></li>-->
+<!--            <li>-->
+<!--                <a href="https://calendar.google.com/calendar/ical/ntlq0beg6fage4ddd0444ndc28%40group.calendar.google.com/public/basic.ics"-->
+<!--                   target="_blank">Gruppe «trottinett»</a></li>-->
+<!--            <li>-->
+<!--                <a href="https://calendar.google.com/calendar/ical/tttq7u0fad0gcgjvajet5n511s%40group.calendar.google.com/public/basic.ics"-->
+<!--                   target="_blank">Gruppe «rock the feet»</a></li>-->
+<!--            <li>-->
+<!--                <a href="https://calendar.google.com/calendar/ical/c5bi43jkab95ut958usl133js4%40group.calendar.google.com/public/basic.ics"-->
+<!--                   target="_blank">Gruppe «il pedone»</a></li>-->
+<!--        </ul>-->
         <ul>
             <li>
-                <a href="https://calendar.google.com/calendar/ical/8733709plbmcsqluaq0fuq62ls%40group.calendar.google.com/public/basic.ics"
-                   target="_blank">Gruppe «hurrlibus»</a></li>
+                <?php
+                echo do_shortcode('[eo_subscribe title="Probe hurrlibus events" type="webcal" class="sf-calendar-subscribe" category="probe-hurrlibus"] Probe hurrlibus events [/eo_subscribe]');
+                ?>
+            </li>
             <li>
-                <a href="https://calendar.google.com/calendar/ical/ntlq0beg6fage4ddd0444ndc28%40group.calendar.google.com/public/basic.ics"
-                   target="_blank">Gruppe «trottinett»</a></li>
+                <?php
+                echo do_shortcode('[eo_subscribe title="Probe geradewaegs" type="webcal" class="sf-calendar-subscribe" category="probe-geradewaegs"] Probe geradewaegs events [/eo_subscribe]');
+                ?>
+            </li>
             <li>
-                <a href="https://calendar.google.com/calendar/ical/tttq7u0fad0gcgjvajet5n511s%40group.calendar.google.com/public/basic.ics"
-                   target="_blank">Gruppe «rock the feet»</a></li>
+                <?php
+                echo do_shortcode('[eo_subscribe title="Probe rockets events" type="webcal" class="sf-calendar-subscribe" category="probe-rockets"] Probe rockets events [/eo_subscribe]');
+                ?>
+            </li>
             <li>
-                <a href="https://calendar.google.com/calendar/ical/c5bi43jkab95ut958usl133js4%40group.calendar.google.com/public/basic.ics"
-                   target="_blank">Gruppe «il pedone»</a></li>
+                <?php
+                echo do_shortcode('[eo_subscribe title="Probe trottinett events" type="webcal" class="sf-calendar-subscribe" category="probe-trottinett"] Probe trottinett events [/eo_subscribe]');
+                ?>
+            </li>
         </ul>
         <?php
         wp_reset_postdata(); ?>
